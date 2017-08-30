@@ -1,0 +1,20 @@
+例：
+
+<button id="btnClick">点击</button>
+<div id="showDiv">展开内容</div>
+
+<script>
+    $(function(){
+	var btnClick = $('#btnClick');
+	var showDiv= $('#showDiv');
+	btnClick.click(function(event){
+	    event.stopPropagation();
+	    showDiv.toggle(); 
+	})
+	$(document).click(function(){
+            showDiv.hide(); 	
+	}) 
+    })		
+</script>
+
+注：阻止事件冒泡
