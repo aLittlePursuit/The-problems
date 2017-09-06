@@ -1,61 +1,16 @@
-例：点击事件跳转路径
-
-当前文件路径是 localhost:8000/vipcard
-<templete>
-    <div class="" @click="bugCart">购买<div>
-</templete>
-
-<script>
-    export default {
-	methods: {
-	    buyCart(){
-                this.$router.push('/confirmOrder/payment');
-            }
-	}
-    }	
-</script>
-
-点击之后路径为 localhost:8000/confirmOrder/payment
+例子：
+/*这个是组件组件的住的名称为v-header*/
+<header>
+   <slot name='logo'></slot>
+   <slot name='search'></slot>
+   <slot name="edit"></slot>
+   <slot name="msite-title"></slot>
+   <slot name="changecity"></slot>
+   <slot name="changeLogin"></slot>
+</header>
 
 
-
-
-例：点击事件跳转路径(传参跳转)
-
-当前文件路径是 localhost:8000/vipcard
-<templete>
-    <div class="" @click="bugCart('/confirmOrder/payment')">购买<div>
-</templete>
-
-<script>
-    export default {
-	methods: {
-	    buyCart(path){
-                this.$router.push(path);
-            }
-	}
-    }	
-</script>
-点击之后路径为带参数 localhost:8000/confirmOrder/payment
-
-
-
-
-例：点击事件跳转路径(跳转路径后代参数)
-
-当前文件路径是 localhost:8000/vipcard
-<templete>
-    <div class="" @click="bugCart">购买<div>
-</templete>
-
-<script>
-    export default {
-	methods: {
-	    buyCart(){
-                this.$router.push({path:'/confirmOrder/payment', query:{num: 1}});
-            }
-	}
-    }	
-</script>
-
-点击之后路径为带参数 localhost:8000/confirmOrder/payment?num=1
+/*这里要使用组件并且使用的位置不同填充的内容不同*/
+<v-header>
+   <span slot='logo' class="" @click="reload">分发的内容</span>
+</v-header>
