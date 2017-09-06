@@ -1,8 +1,12 @@
-/*没有指定tag属性的时候默认解析后router-link为a标签*/
+/*
+*没有指定tag属性的时候默认解析后router-link为a标签
+*/
 <router-link to="/"></router-link>
 
 
-/*指定tag属性的时候解析后router-link为tag属性的值的标签,此处为li标签*/
+/*
+*指定tag属性的时候解析后router-link为tag属性的值的标签,此处为li标签
+*/
 <router-link  tag="li" to="/"></router-link>
 
 
@@ -10,7 +14,9 @@
     path: '/city/:cityid',
     component: city
 }
-当出现这种方式的跳转时，说明展示页面为同一个页面只是展示的内容根据id的不同而不同
+/*
+*当出现这种方式的跳转时，说明展示页面为同一个页面只是展示的内容根据id的不同而不同
+*/
 <router-link  v-for="item in hotcity" :to="'/city/' + item.id" :key="item.id">
     {{item.name}}
 </router-link>
@@ -21,7 +27,9 @@
 
 
 
-/*如果跳转路径为 "/aaa/bbb" */
+/*
+*如果跳转路径为 "/aaa/bbb" 
+*/
 aaa.vue因为是想aaa.vue下的文件跳转所以aaa.vue文件应该出现router-view
 
 
