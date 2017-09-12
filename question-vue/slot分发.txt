@@ -17,5 +17,17 @@
 *这里要使用组件并且使用的位置不同填充的内容不同
 */
 <v-header>
-   <span slot='logo' class="" @click="reload">分发的内容</span>
+   // 需要展示logo就引入logo的slot
+   <span slot='logo' class="log" @click="reload">分发的内容</span>
 </v-header>
+
+<style>
+  // 定义分发内容的样式
+  .log {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	width: 50px;
+	height: 30px;
+  }
+</style>
