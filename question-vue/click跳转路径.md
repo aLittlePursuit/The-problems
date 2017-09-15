@@ -1,8 +1,8 @@
-例：点击事件跳转路径
+## click跳转路径
+##### 当前文件路径是 localhost:8000/vipcard
+> 例：点击事件跳转路径
 
-/*
-*当前文件路径是 localhost:8000/vipcard
-*/
+```
 <templete>
     <div class="" @click="bugCart">购买<div>
 </templete>
@@ -15,18 +15,11 @@
             }
 	}
     }	
-</script>
+```
+点击之后路径为 localhost:8000/confirmOrder/payment
+> 例：点击事件跳转路径(传参跳转)
 
-// 点击之后路径为 localhost:8000/confirmOrder/payment
-
-
-
-
-例：点击事件跳转路径(传参跳转)
-
-/*
-*当前文件路径是 localhost:8000/vipcard
-*/
+```
 <templete>
     <div class="" @click="bugCart('/confirmOrder/payment')">购买<div>
 </templete>
@@ -40,16 +33,11 @@
 	}
     }	
 </script>
-// 点击之后路径为带参数 localhost:8000/confirmOrder/payment
+```
+点击之后路径为带参数 localhost:8000/confirmOrder/payment
+> 例：点击事件跳转路径(跳转路径后代参数)
 
-
-
-
-例：点击事件跳转路径(跳转路径后代参数)
-
-/*
-*当前文件路径是 localhost:8000/vipcard
-*/
+```
 <templete>
     <div class="" @click="bugCart">购买<div>
 </templete>
@@ -63,5 +51,5 @@
 	}
     }	
 </script>
-
-// 点击之后路径为带参数 localhost:8000/confirmOrder/payment?num=1
+```
+点击之后路径为带参数 localhost:8000/confirmOrder/payment?num=1
