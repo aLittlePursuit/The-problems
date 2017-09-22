@@ -1,0 +1,61 @@
+## vue字符串拼接
+> 传统的拼接方法
+
+```
+<template>
+    <div class="avatar-wrap">
+      <img class="image" :src="avatar" :width="size" :height="size" :style="border" alt="">
+      <div class="grade" v-if="grade">
+        <i class="iconfont iconfont-v"></i><span>{{ grade }}</span>
+      </div>
+    </div>
+</template>
+
+export default {
+    data () {
+      return {
+        border: ''
+      }
+    },
+    props: {
+      avatar: '',
+      size: '',
+      borderWidth: '',
+      borderColor: '',
+      grade: ''
+    },
+    created () {
+      this.border = 'border: ' + this.borderWidth + 'px' + ' solid ' + this.borderColor
+    }
+  }
+```
+> vue的拼接方法
+
+```
+<template>
+    <div class="avatar-wrap">
+      <img class="image" :src="avatar" :width="size" :height="size" :style="border" alt="">
+      <div class="grade" v-if="grade">
+        <i class="iconfont iconfont-v"></i><span>{{ grade }}</span>
+      </div>
+    </div>
+</template>
+
+export default {
+    data () {
+      return {
+        border: ''
+      }
+    },
+    props: {
+      avatar: '',
+      size: '',
+      borderWidth: '',
+      borderColor: '',
+      grade: ''
+    },
+    created () {
+      this.border = `border: ${this.borderWidth}px solid ${this.borderColor}`
+    }
+  }
+```
