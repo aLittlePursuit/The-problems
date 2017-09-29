@@ -14,8 +14,7 @@ export const getLocalStorage = (key) => {
 > 在目标文件中直接引入方式
 
 ```
-import { saveLocalStorage } from './文件路径/common'
-import { getLocalStorage } from './文件路径/common'
+import { saveLocalStorage, getLocalStorage } from './文件路径/common'
 ```
 > 使用方式
 
