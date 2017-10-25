@@ -20,4 +20,12 @@
     {{item.name}}
 </router-link>
 ```
+> name跳转
+
+```
+<router-link :to="{name: 'name'}"></router-link>
+<router-link :to="{name: 'name', params: {type: 'type'}}"></router-link>
+<router-link :to="{name: 'name', query: {type: 'type'}}"></router-link>
+```
+
 注释：无论router-link解析后的是什么标签只要带to属性都可跳转路径，（单独的页面跳转直接to="跳转地址"，重复使用根据id不同填充响应的数据的页面需要用:to="跳转地址"）
