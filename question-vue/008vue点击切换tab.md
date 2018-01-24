@@ -9,9 +9,6 @@
         <div class="tab-cell" :class="{active: changeType === 'question'}" @click="changeTab('question')">问答</div>
       </div>
 </template>
-```
-
-```
 <script>
     export default {
         methods: {
@@ -22,9 +19,6 @@
         }
     }
 </script>
-```
-
-```
 <style lang="scss" rel="stylesheet/scss" scoped>
   .tab {
       display: flex;
